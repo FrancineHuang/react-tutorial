@@ -1,22 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css'
 
-function Greeting() {
+function BookList() {
+    return(
+        <section className='booklist'>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+        </section>
+    )
+}
+
+const Book = () => {
     return (
-        <>
-            <div>
-                <h3>Hello World</h3>
-                <ul>
-                    <li>
-                        <a href="#">Hello list 1</a>
-                    </li>
-                </ul>
-            </div>
-            <h2>Hello World</h2>
-        </>
-    );
+        <article className='book'>
+            <Image />
+            <Title />
+            <Author />
+        </article>
+    )
+}
+
+const Image = () => (
+    <img 
+        src='https://m.media-amazon.com/images/I/411-+bcHfKL._SY445_SX342_.jpg'
+        alt='The Heaven & Earth Grocery Store: A Novel'
+    />
+)
+
+const Title = () => {
+    return <h2>The Heaven & Earth Grocery Store: A Novel</h2>
+}
+
+const Author = () => {
+    return <h4>James McBride</h4>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Greeting/>);
+root.render(<BookList/>);

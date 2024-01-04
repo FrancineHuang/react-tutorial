@@ -35,7 +35,7 @@ const Title = () => {
 }
 
 const Author = () => {
-    return <h4>James McBride</h4>
+    return <h4 style={{color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}}>James McBride</h4>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
 
+const author = 'Jordan Moore';
+const title = 'Interesting Facts For Curious Minds';
+const image = 'https://m.media-amazon.com/images/I/411-+bcHfKL._SY445_SX342_.jpg';
+
 function BookList() {
     return(
         <section className='booklist'>
@@ -13,17 +17,16 @@ function BookList() {
     )
 }
 
-const Book = () => {
-    const author = 'Jordan Moore';
-    const title = 'The Heaven & Earth Grocery Store: A Novel';
+const Book = (props) => {
     return (
         <article className='book'>
             <img
-                src='https://m.media-amazon.com/images/I/411-+bcHfKL._SY445_SX342_.jpg'
-                alt='The Heaven & Earth Grocery Store: A Novel'
+                src={image}
+                alt={title}
             />
             <h2>{title}</h2>
             <h4>{author}</h4>
+            {console.log(props)}
         </article>
     )
 }

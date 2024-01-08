@@ -21,6 +21,7 @@ function BookList() {
                 title={firstBook.title}
                 image={firstBook.image}
             >
+                {/* Here is the place to add a children prop with a closing tag */}
                 <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
                 repudiandae inventore eos qui animi sed iusto alias eius ea sapiente.

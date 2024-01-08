@@ -9,10 +9,8 @@ const image = 'https://m.media-amazon.com/images/I/411-+bcHfKL._SY445_SX342_.jpg
 function BookList() {
     return(
         <section className='booklist'>
-            <Book/>
-            <Book/>
-            <Book/>
-            <Book/>
+            <Book job='developer'/>
+            <Book title='ramdom title' number={22}/>
         </section>
     )
 }
@@ -26,7 +24,9 @@ const Book = (props) => {
             />
             <h2>{title}</h2>
             <h4>{author}</h4>
-            {console.log(props)}
+            <p>{props.job}</p>
+            <p>{props.title}</p>
+            <p>{props.number}</p>
         </article>
     )
 }

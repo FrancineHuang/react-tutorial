@@ -1,14 +1,24 @@
+import img1 from './images/book-1.jpg';
+import img2 from './images/book-2.jpg';
+import img3 from './images/book-3.jpg';
+
 export const books = [
     {
         author: 'Jordan Moore',
         title: 'Interesting Facts For Curious Minds',
-        image: 'https://m.media-amazon.com/images/I/411-+bcHfKL._SY445_SX342_.jpg',
+        image: img1,
         id: 1,
     },
     {
         author: 'James Clear',
         title: 'Atomic Habits',
-        image: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
+        image: img2,
         id: 2,
+    },
+    {
+        author: 'Evie Woods',
+        title: 'The Lost Bookshop',
+        image: img3,
+        id: 3,
     }
 ];

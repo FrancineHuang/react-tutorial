@@ -6,18 +6,21 @@ import { books } from './books'
 
 function BookList() {
     return (
-        <section className='booklist'>
-            {books.map((book) => {
-                console.log(book);
+        <>
+            <h1>Amazon Best Sellers</h1>
+            <section className='booklist'>
+                {books.map((book, index) => {
+                    console.log(book);
 
-                return <Book {...book} key={book.id} />;
-            })}
-        </section>
+                    return <Book {...book} key={book.id} number={index}/>;
+                })}
+            </section>
+        </>
     );
 }
 
 const Book = (props) => {
-    const { image, title, author } = props;
+    const { image, title, author, number } = props;
     return (
         <article className='book'>
             <img
@@ -26,6 +29,7 @@ const Book = (props) => {
             />
             <h2>{title}</h2>
             <h4>{author}</h4>
+            <span className='number'>{`# ${number + 1}`}</span>
         </article>
     )
 }
